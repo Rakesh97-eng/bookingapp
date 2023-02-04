@@ -1,0 +1,29 @@
+.navbar{
+    background-color: #003580;
+    display: flex;
+    justify-content: center;
+    font-weight: bold;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    height: 50px;
+}
+
+.navcontainer{
+    width: 100%;
+    max-width: 1024px ;
+    display: flex;
+    color: rgba(211, 164, 164, 0.765);
+    align-items: center;
+    justify-content: space-evenly;
+
+}
+
+.navlogo{
+    font-size: larger;
+}
+
+.navitem button{
+cursor: pointer;
+border-style: none;
+border-radius: 2px;
+margin: 5px ;
+}

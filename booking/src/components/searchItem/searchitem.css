@@ -1,0 +1,16 @@
+.searchitem{
+    width: 80%;
+    border: solid 2px yellow;
+    border-radius: 4px;
+    background-color: #005580;
+    align-items: center;
+    margin: 8%;
+    color: black;
+   
+}
+
+.button{
+    border: solid 2px yellow;
+    float: right;
+    border-radius: 4px;
+}

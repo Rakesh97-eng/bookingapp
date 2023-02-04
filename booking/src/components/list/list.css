@@ -1,0 +1,29 @@
+.listcontainer{
+    background-color: #febb02;
+    width: 30%;
+    height: max-content;
+    margin: 10px;
+    align-items: center;
+    border-radius: 5px;
+    justify-content: space-evenly ;
+}
+
+.listinput{
+    width: 50%;
+    justify-content: space-evenly ;
+}
+
+.listoption{
+    display: flex;
+    justify-content: space-evenly ;
+}
+.listoptinput{
+    width: 30%;
+    height: 15px;
+}
+
+.listoption label{
+    width: 50%;
+    height: 55px;
+
+}

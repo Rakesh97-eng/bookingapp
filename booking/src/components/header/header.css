@@ -1,0 +1,43 @@
+.header{
+        background-color: #003580;
+        color: white;
+        align-content: center;
+}
+
+.headlist {
+    display: flex;
+    justify-content: space-evenly;
+    color: black;
+    font-weight: bold;
+}
+
+
+.headlistitem{
+    border: 1px solid white;
+    border-radius: 3px;
+    font-size: small;
+}
+
+.headsearch{
+    display: flex;
+    justify-content: center;
+   
+   
+}
+.headsearch>div{
+  
+    border: 2px yellow solid;
+}
+
+.headdate{
+      position: relative;
+      height: 5px;
+      background-color: black;
+      width: 5px;
+      padding: 10px;
+}
+.headcounts{
+    width: 45px;
+    border: none;
+    
+}
