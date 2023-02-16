@@ -1,10 +1,11 @@
 import "./header.css";
-import { useState } from "react";
+import { useContext, useState } from "react";
 import "react-date-range/dist/styles.css"; // main css file
 import "react-date-range/dist/theme/default.css";
 import { DateRange } from "react-date-range";
 import { format } from "date-fns";
 import {useNavigate} from "react-router-dom"
+import { serachcontext } from "../../cotext/context";
 
 const Header = ({ type }) => {
   const [destination, setDestination] = useState("");
@@ -18,21 +19,20 @@ const Header = ({ type }) => {
   const [show, setShow] = useState(false);
   const [counts, setCounts] = useState({ adults: "", children: "", rooms: "" });
   const navigate = useNavigate();
-
+  const {dispatch} = useContext(serachcontext)
   const Daterange = (item) => {
-    console.log("iyr", item);
+   
     setDate([item.selection]);
-    console.log("date", date);
+  
   };
 
   const Submit = (e) => {
-    console.log(e);
     setCounts({ ...counts, [e.target.name]: e.target.value });
-    console.log("counts", counts);
   };
 
   const handlesearch = () => {
-   navigate("/list",{state:{destination,date,counts}})
+      dispatch({type:"newsearch",payload:{destination,date,counts}})
+       navigate("/list",{state:{destination,date,counts}})
   };
   return (
     <>
@@ -61,7 +61,7 @@ const Header = ({ type }) => {
                   <span onClick={() => setShow(!show)}>::</span>
                   {/* <span>{`${format(date[0].startDate,"MM/dd/yyyy")}to ${format(date[0].endDate,"MM/dd/yyyy")}`}</span> */}
                   {show && (
-                    <div>
+                    <div >
                       <DateRange
                         editableDateInputs={true}
                         onChange={(item) => Daterange(item)}

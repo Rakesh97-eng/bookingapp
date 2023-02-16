@@ -26,7 +26,8 @@ export const verifyuser = (req,res,next)=>{
 }
 
 export const verifyadmin = (req,res,next)=>{
-    verifytoken(req,res,()=>{
+    verifytoken(req, res, () => {
+        
         console.log(req.user);
         if(req.user.isAdmin){
             next()

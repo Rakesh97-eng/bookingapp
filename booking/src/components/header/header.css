@@ -13,19 +13,23 @@
 
 
 .headlistitem{
-    border: 1px solid white;
-    border-radius: 3px;
+    border: 2px solid rgb(150, 132, 132);
+    border-radius: 30px;
     font-size: small;
+    color:white;
+    justify-items: center;
+    align-items: center;
+    padding:10px;
 }
 
 .headsearch{
     display: flex;
-    justify-content: center;
+    justify-content:space-around;
    
    
 }
 .headsearch>div{
-  
+    margin: 1px;
     border: 2px yellow solid;
 }
 
@@ -35,6 +39,7 @@
       background-color: black;
       width: 5px;
       padding: 10px;
+      z-index: 3;
 }
 .headcounts{
     width: 45px;

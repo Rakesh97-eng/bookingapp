@@ -1,4 +1,5 @@
 import Hotels from "../models/hotels.js";
+import roommodel from "../models/rooms.js";
 
 export const hotelgetbyId = async(req,res,next)=>{
     try{
@@ -65,6 +66,22 @@ export const countbyCity = async (req,res,next)=>{
         res.send(list);
     }
     catch(err){
+        res.send(err)
+    }
+}
+
+export const getRooms = async (req, res, next) => {
+    let hotelId = req.params.id;
+    console.log("hotels",hotelId);
+    try {
+        let list = await Hotels.findById(hotelId);
+        console.log("kist",list);
+       let rooms = await Promise.all( list.rooms.map(async(room) => {
+            return roommodel.findById(room);
+       }))
+        res.send(rooms)
+    }
+    catch (err) {
         res.send(err)
     }
 }

@@ -1,0 +1,21 @@
+.Hotelbg{
+   background-position: center;
+   background-repeat: no-repeat;
+   background-size: cover;
+   height: 100%;
+}
+.Hotel{
+   align-items:flex-start;
+   width:max-content;
+   justify-content: flex-start;
+   display: flex;
+   margin: 2%;
+   /* background-color: black; */
+   /* color:rgb(184, 66, 66); */
+   /* margin: auto; */
+}
+
+
+body, html {
+   height: 100%;
+ }
